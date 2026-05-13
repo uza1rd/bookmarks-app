@@ -1,26 +1,122 @@
 [
   {
     "id": 1,
-    "title": "OpenAI",
-    "url": "https://openai.com",
-    "category": "AI",
-    "description": "AI research company",
-    "createdAt": "2024-05-13T10:00:00Z"
+    "title": "Gmail",
+    "url": "https://accounts.google.com/b/0/AddMailService",
+    "category": "Google",
+    "description": "Google Mail service",
+    "createdAt": "2023-07-22T00:00:00Z"
   },
   {
     "id": 2,
-    "title": "GitHub",
-    "url": "https://github.com",
-    "category": "Development",
-    "description": "Code hosting platform",
-    "createdAt": "2024-05-13T10:05:00Z"
+    "title": "Drive",
+    "url": "https://drive.google.com/drive/u/1/",
+    "category": "Google",
+    "description": "Google Drive cloud storage",
+    "createdAt": "2025-09-09T00:00:00Z"
   },
   {
     "id": 3,
-    "title": "Dribbble",
-    "url": "https://dribbble.com",
-    "category": "Design",
-    "description": "Design portfolio platform",
-    "createdAt": "2024-05-13T10:10:00Z"
+    "title": "Photos",
+    "url": "https://photos.google.com/u/1/?pli=1&pageId=none",
+    "category": "Google",
+    "description": "Google Photos gallery",
+    "createdAt": "2025-09-24T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Google Docs",
+    "url": "https://docs.google.com/document/u/1/",
+    "category": "Google",
+    "description": "Google Docs editor",
+    "createdAt": "2025-08-20T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "title": "YouTube",
+    "url": "https://www.youtube.com/",
+    "category": "Media",
+    "description": "Video streaming platform",
+    "createdAt": "2024-04-26T00:00:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Google AI Studio",
+    "url": "https://aistudio.google.com/u/1/?pli=1",
+    "category": "AI",
+    "description": "Google AI development studio",
+    "createdAt": "2026-02-16T00:00:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Colab",
+    "url": "https://colab.research.google.com/?authuser=1",
+    "category": "Development",
+    "description": "Google Colab notebooks",
+    "createdAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Claude",
+    "url": "https://claude.ai/new",
+    "category": "AI",
+    "description": "Claude AI assistant",
+    "createdAt": "2026-03-13T00:00:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Gemini",
+    "url": "https://gemini.google.com/u/1/app",
+    "category": "AI",
+    "description": "Google Gemini AI",
+    "createdAt": "2025-09-09T00:00:00Z"
+  },
+  {
+    "id": 10,
+    "title": "ChatGPT",
+    "url": "https://chat.openai.com/",
+    "category": "AI",
+    "description": "OpenAI ChatGPT",
+    "createdAt": "2024-04-26T00:00:00Z"
+  },
+  {
+    "id": 11,
+    "title": "GitHub",
+    "url": "https://github.com/",
+    "category": "Development",
+    "description": "Code hosting platform",
+    "createdAt": "2025-08-20T00:00:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Spotify",
+    "url": "https://open.spotify.com/",
+    "category": "Music",
+    "description": "Music streaming platform",
+    "createdAt": "2026-01-05T00:00:00Z"
+  },
+  {
+    "id": 13,
+    "title": "LinkedIn",
+    "url": "https://www.linkedin.com/feed/",
+    "category": "Social",
+    "description": "Professional networking platform",
+    "createdAt": "2025-11-10T00:00:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Amazon",
+    "url": "https://www.amazon.in/",
+    "category": "Shopping",
+    "description": "Online shopping marketplace",
+    "createdAt": "2026-03-08T00:00:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Flipkart",
+    "url": "https://www.flipkart.com/",
+    "category": "Shopping",
+    "description": "Indian e-commerce platform",
+    "createdAt": "2026-03-08T00:00:00Z"
   }
 ]
