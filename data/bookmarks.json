@@ -3,120 +3,352 @@
     "id": 1,
     "title": "Gmail",
     "url": "https://accounts.google.com/b/0/AddMailService",
-    "category": "Google",
+    "category": "Bookmarks Bar",
     "description": "Google Mail service",
-    "createdAt": "2023-07-22T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 2,
-    "title": "Drive",
+    "title": "Google Drive",
     "url": "https://drive.google.com/drive/u/1/",
-    "category": "Google",
+    "category": "Bookmarks Bar",
     "description": "Google Drive cloud storage",
-    "createdAt": "2025-09-09T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 3,
-    "title": "Photos",
+    "title": "Google Photos",
     "url": "https://photos.google.com/u/1/?pli=1&pageId=none",
-    "category": "Google",
+    "category": "Bookmarks Bar",
     "description": "Google Photos gallery",
-    "createdAt": "2025-09-24T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 4,
     "title": "Google Docs",
-    "url": "https://docs.google.com/document/u/1/",
-    "category": "Google",
+    "url": "https://docs.google.com/document/u/0/",
+    "category": "Bookmarks Bar",
     "description": "Google Docs editor",
-    "createdAt": "2025-08-20T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 5,
     "title": "YouTube",
     "url": "https://www.youtube.com/",
-    "category": "Media",
+    "category": "Bookmarks Bar",
     "description": "Video streaming platform",
-    "createdAt": "2024-04-26T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 6,
     "title": "Google AI Studio",
-    "url": "https://aistudio.google.com/u/1/?pli=1",
-    "category": "AI",
+    "url": "https://aistudio.google.com/prompts/new_chat",
+    "category": "Bookmarks Bar",
     "description": "Google AI development studio",
-    "createdAt": "2026-02-16T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 7,
-    "title": "Colab",
-    "url": "https://colab.research.google.com/?authuser=1",
-    "category": "Development",
+    "title": "Google Colab",
+    "url": "https://colab.research.google.com/",
+    "category": "Bookmarks Bar",
     "description": "Google Colab notebooks",
-    "createdAt": "2026-01-04T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 8,
     "title": "Claude",
     "url": "https://claude.ai/new",
-    "category": "AI",
+    "category": "Bookmarks Bar",
     "description": "Claude AI assistant",
-    "createdAt": "2026-03-13T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 9,
     "title": "Gemini",
     "url": "https://gemini.google.com/u/1/app",
-    "category": "AI",
+    "category": "Bookmarks Bar",
     "description": "Google Gemini AI",
-    "createdAt": "2025-09-09T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 10,
     "title": "ChatGPT",
     "url": "https://chat.openai.com/",
-    "category": "AI",
+    "category": "Bookmarks Bar",
     "description": "OpenAI ChatGPT",
-    "createdAt": "2024-04-26T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 11,
-    "title": "GitHub",
-    "url": "https://github.com/",
-    "category": "Development",
-    "description": "Code hosting platform",
-    "createdAt": "2025-08-20T00:00:00Z"
+    "title": "Google Stitch",
+    "url": "https://stitch.withgoogle.com/u/1/?pli=1",
+    "category": "Bookmarks Bar",
+    "description": "Google Stitch design tool",
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 12,
-    "title": "Spotify",
-    "url": "https://open.spotify.com/",
-    "category": "Music",
-    "description": "Music streaming platform",
-    "createdAt": "2026-01-05T00:00:00Z"
+    "title": "Lovable",
+    "url": "https://lovable.dev/",
+    "category": "Bookmarks Bar",
+    "description": "AI app builder platform",
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 13,
-    "title": "LinkedIn",
-    "url": "https://www.linkedin.com/feed/",
-    "category": "Social",
-    "description": "Professional networking platform",
-    "createdAt": "2025-11-10T00:00:00Z"
+    "title": "Netlify",
+    "url": "https://app.netlify.com/teams/delawalauzer/projects",
+    "category": "Bookmarks Bar",
+    "description": "Web hosting and deployment platform",
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 14,
-    "title": "Amazon",
-    "url": "https://www.amazon.in/",
-    "category": "Shopping",
-    "description": "Online shopping marketplace",
-    "createdAt": "2026-03-08T00:00:00Z"
+    "title": "WhatsApp Web",
+    "url": "https://web.whatsapp.com/",
+    "category": "Bookmarks Bar",
+    "description": "WhatsApp web messenger",
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 15,
+    "title": "Spotify",
+    "url": "https://open.spotify.com/",
+    "category": "Bookmarks Bar",
+    "description": "Music streaming platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 16,
+    "title": "GitHub",
+    "url": "https://github.com/",
+    "category": "Bookmarks Bar",
+    "description": "Code hosting platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 17,
+    "title": "Google Meet",
+    "url": "https://meet.google.com/landing?pli=1",
+    "category": "Bookmarks Bar",
+    "description": "Google video conferencing platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 18,
+    "title": "Zoom",
+    "url": "https://www.zoom.com/",
+    "category": "Bookmarks Bar",
+    "description": "Video conferencing platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 19,
+    "title": "LinkedIn",
+    "url": "https://www.linkedin.com/feed/",
+    "category": "Bookmarks Bar",
+    "description": "Professional networking platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 20,
+    "title": "MoviesMod",
+    "url": "https://moviesmod.farm/",
+    "category": "Media",
+    "description": "Movie download website",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 21,
+    "title": "MoviesLeech",
+    "url": "https://moviesleech.link/",
+    "category": "Media",
+    "description": "Movie streaming and download site",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 22,
+    "title": "Movies4U",
+    "url": "https://movies4u.ee/",
+    "category": "Media",
+    "description": "Online movie streaming platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 23,
+    "title": "HDHub4U",
+    "url": "https://new1.hdhub4u.limo/?utm=mn1",
+    "category": "Media",
+    "description": "Movie and series download website",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 24,
+    "title": "VegaMovies",
+    "url": "https://vegamovies.global/",
+    "category": "Media",
+    "description": "Movie streaming and download site",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 25,
+    "title": "MKVCinemas",
+    "url": "https://mkvcinemas.sc/",
+    "category": "Media",
+    "description": "Movie download platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 26,
+    "title": "JioMart",
+    "url": "https://www.jiomart.com/",
+    "category": "Shopping & Booking",
+    "description": "Online grocery and shopping platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 27,
+    "title": "Amazon India",
+    "url": "https://www.amazon.in/",
+    "category": "Shopping & Booking",
+    "description": "Online shopping marketplace",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 28,
+    "title": "Rapido",
+    "url": "https://m.rapido.bike/home",
+    "category": "Shopping & Booking",
+    "description": "Bike taxi and ride booking service",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 29,
+    "title": "Uber",
+    "url": "https://m.uber.com/go/home",
+    "category": "Shopping & Booking",
+    "description": "Ride booking platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 30,
     "title": "Flipkart",
     "url": "https://www.flipkart.com/",
-    "category": "Shopping",
+    "category": "Shopping & Booking",
     "description": "Indian e-commerce platform",
-    "createdAt": "2026-03-08T00:00:00Z"
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 31,
+    "title": "Blinkit",
+    "url": "https://blinkit.com/",
+    "category": "Shopping & Booking",
+    "description": "Instant grocery delivery platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 32,
+    "title": "BigBasket",
+    "url": "https://www.bigbasket.com/",
+    "category": "Shopping & Booking",
+    "description": "Online grocery shopping platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 33,
+    "title": "Lenskart",
+    "url": "https://www.lenskart.com/",
+    "category": "Shopping & Booking",
+    "description": "Eyewear shopping platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 34,
+    "title": "Myntra",
+    "url": "https://www.myntra.com/",
+    "category": "Shopping & Booking",
+    "description": "Fashion and lifestyle shopping platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 35,
+    "title": "Ajio",
+    "url": "https://www.ajio.com/",
+    "category": "Shopping & Booking",
+    "description": "Online fashion and apparel store",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 36,
+    "title": "Classy Shoes Reseller",
+    "url": "https://classyshoesreseller.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 316",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 37,
+    "title": "Kamal Enterprise",
+    "url": "https://kamalenterprise.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 3rd Floor Last",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 38,
+    "title": "Golden Sunglass",
+    "url": "https://goldensunglass.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 4th Floor",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 39,
+    "title": "Classy Slide",
+    "url": "https://classyslide.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: Variyali Bazaar",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 40,
+    "title": "Watch Aqua",
+    "url": "https://watch-aqua.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Watch reseller store",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 41,
+    "title": "WatchCode1",
+    "url": "https://watchcode1.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Luxury watch reseller",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 42,
+    "title": "Foot Shoppers",
+    "url": "https://foot-shoppers.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Footwear reseller platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 43,
+    "title": "Le Brouges Resell",
+    "url": "https://le-brouges-resell.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Fashion reseller store",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 44,
+    "title": "VNSGU",
+    "url": "https://vnsgu.net/",
+    "category": "University",
+    "description": "Veer Narmad South Gujarat University portal",
+    "createdAt": "2026-05-13T00:00:00Z"
   }
 ]
