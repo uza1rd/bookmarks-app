@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "OpenAI",
+    "url": "https://openai.com",
+    "category": "AI",
+    "description": "AI research company",
+    "createdAt": "2024-05-13T10:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "GitHub",
+    "url": "https://github.com",
+    "category": "Development",
+    "description": "Code hosting platform",
+    "createdAt": "2024-05-13T10:05:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Dribbble",
+    "url": "https://dribbble.com",
+    "category": "Design",
+    "description": "Design portfolio platform",
+    "createdAt": "2024-05-13T10:10:00Z"
+  }
+]
