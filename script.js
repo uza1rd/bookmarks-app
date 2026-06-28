@@ -2,6 +2,9 @@
 let bookmarks = [];
 let currentCategory = 'All';
 
+// Drag-and-drop state
+let dragSrcId = null;
+
 // DOM Elements
 const searchInput = document.getElementById('searchInput');
 const themeToggle = document.getElementById('themeToggle');
@@ -46,7 +49,6 @@ async function loadBookmarks() {
     if (stored) {
         bookmarks = JSON.parse(stored);
     } else {
-        // Load default from json if possible, or use hardcoded fallback
         try {
             const res = await fetch('data/bookmarks.json');
             if (res.ok) {
@@ -98,10 +100,15 @@ function saveBookmarks() {
 // Rendering
 function renderBookmarks() {
     const searchTerm = searchInput.value.toLowerCase();
-    
-    let filtered = bookmarks.filter(b => {
+
+    // Disable drag-and-drop only when a text search is active,
+    // because reordering a keyword-filtered subset is confusing.
+    // Category filtering is fine — we reorder within that category's slice.
+    const isFiltered = searchTerm !== '';
+
+    const filtered = bookmarks.filter(b => {
         const matchesCategory = currentCategory === 'All' || b.category === currentCategory;
-        const matchesSearch = b.title.toLowerCase().includes(searchTerm) || 
+        const matchesSearch = b.title.toLowerCase().includes(searchTerm) ||
                               (b.category && b.category.toLowerCase().includes(searchTerm)) ||
                               (b.description && b.description.toLowerCase().includes(searchTerm));
         return matchesCategory && matchesSearch;
@@ -113,23 +120,34 @@ function renderBookmarks() {
         emptyState.style.display = 'block';
     } else {
         emptyState.style.display = 'none';
-        
-        filtered.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).forEach(bookmark => {
+
+        filtered.forEach(bookmark => {
             const card = document.createElement('article');
             card.className = 'bookmark-card';
-            
-            // Generate favicon URL (fallback to a generic icon if failed)
+            card.dataset.id = bookmark.id;
+            card.draggable = !isFiltered;
+
             let domain = '';
             try {
                 domain = new URL(bookmark.url).hostname;
-            } catch(e) {
+            } catch (e) {
                 domain = bookmark.url;
             }
-            
+
             const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
 
             card.innerHTML = `
                 <div class="card-header">
+                    <span class="drag-handle" title="Drag to reorder" style="${isFiltered ? 'display:none' : ''}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="9"  cy="5"  r="1.5"/>
+                            <circle cx="15" cy="5"  r="1.5"/>
+                            <circle cx="9"  cy="12" r="1.5"/>
+                            <circle cx="15" cy="12" r="1.5"/>
+                            <circle cx="9"  cy="19" r="1.5"/>
+                            <circle cx="15" cy="19" r="1.5"/>
+                        </svg>
+                    </span>
                     <img src="${faviconUrl}" alt="${bookmark.title} icon" class="favicon" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTRhM2I4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiPjwvY2lyY2xlPjxsaW5lIHgxPSIyIiB5MT0iMTIiIHgyPSIyMiIgeTI9IjEyIj48L2xpbmU+PHBhdGggZD0iTTEyIDJhMTUuMyAxNS4zIDAgMCAxIDQgMTBhMTUuMyAxNS4zIDAgMCAxLTQgMTBhMTUuMyAxNS4zIDAgMCAxLTQtMTBhMTUuMyAxNS4zIDAgMCAxIDQtMTB6Ij48L3BhdGg+PC9zdmc+'">
                     <div class="card-title-wrap">
                         <a href="${bookmark.url}" target="_blank" rel="noopener noreferrer" class="card-title" title="${bookmark.title}">${bookmark.title}</a>
@@ -149,24 +167,112 @@ function renderBookmarks() {
                     </div>
                 </div>
             `;
+
             bookmarksGrid.appendChild(card);
         });
     }
 
-    // Attach event listeners to newly rendered buttons
+    // Edit / Delete buttons
     document.querySelectorAll('.edit-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => openEditModal(parseInt(btn.closest('.action-btn').dataset.id)));
+        btn.addEventListener('click', () => openEditModal(parseInt(btn.dataset.id)));
     });
     document.querySelectorAll('.delete-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => openDeleteModal(parseInt(btn.closest('.action-btn').dataset.id)));
+        btn.addEventListener('click', () => openDeleteModal(parseInt(btn.dataset.id)));
     });
+
+    // Drag-and-drop — only wire up when not filtered
+    if (!isFiltered) {
+        document.querySelectorAll('.bookmark-card').forEach(card => {
+            card.addEventListener('dragstart', (e) => {
+                dragSrcId = parseInt(card.dataset.id);
+                // Small delay so the browser snapshot doesn't show the .dragging style
+                requestAnimationFrame(() => card.classList.add('dragging'));
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/plain', String(dragSrcId));
+            });
+
+            card.addEventListener('dragend', () => {
+                card.classList.remove('dragging');
+                document.querySelectorAll('.bookmark-card').forEach(c => c.classList.remove('drag-over'));
+            });
+
+            card.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'move';
+                document.querySelectorAll('.bookmark-card').forEach(c => c.classList.remove('drag-over'));
+                if (parseInt(card.dataset.id) !== dragSrcId) {
+                    card.classList.add('drag-over');
+                }
+            });
+
+            card.addEventListener('dragleave', () => {
+                card.classList.remove('drag-over');
+            });
+
+            card.addEventListener('drop', (e) => {
+                e.preventDefault();
+                card.classList.remove('drag-over');
+
+                const targetId = parseInt(card.dataset.id);
+                if (dragSrcId === null || dragSrcId === targetId) return;
+
+                if (currentCategory === 'All') {
+                    // Simple case: reorder directly in the master array
+                    const srcIndex = bookmarks.findIndex(b => b.id === dragSrcId);
+                    const tgtIndex = bookmarks.findIndex(b => b.id === targetId);
+                    if (srcIndex === -1 || tgtIndex === -1) return;
+
+                    const [moved] = bookmarks.splice(srcIndex, 1);
+                    bookmarks.splice(tgtIndex, 0, moved);
+                } else {
+                    // Category filter active: reorder within the filtered slice,
+                    // then write the new order back to the master array.
+
+                    // 1. Get current filtered ids in rendered order
+                    const filteredIds = [...document.querySelectorAll('.bookmark-card')]
+                        .map(c => parseInt(c.dataset.id));
+
+                    // 2. Apply the reorder to that id list
+                    const srcPos = filteredIds.indexOf(dragSrcId);
+                    const tgtPos = filteredIds.indexOf(targetId);
+                    if (srcPos === -1 || tgtPos === -1) return;
+
+                    filteredIds.splice(srcPos, 1);
+                    filteredIds.splice(tgtPos, 0, dragSrcId);
+
+                    // 3. Build a lookup of the desired order for items in this category
+                    const newOrderMap = new Map(filteredIds.map((id, i) => [id, i]));
+
+                    // 4. Split bookmarks into in-category and out-of-category,
+                    //    preserving out-of-category positions untouched.
+                    const inCat = bookmarks.filter(b => b.category === currentCategory);
+                    const outCat = bookmarks.filter(b => b.category !== currentCategory);
+
+                    // Sort the in-category items by the new order
+                    inCat.sort((a, b) => newOrderMap.get(a.id) - newOrderMap.get(b.id));
+
+                    // 5. Reconstruct master array: slot the reordered in-category items
+                    //    back into the positions they originally occupied.
+                    const inCatPositions = bookmarks
+                        .map((b, i) => b.category === currentCategory ? i : -1)
+                        .filter(i => i !== -1);
+
+                    inCatPositions.forEach((pos, i) => {
+                        bookmarks[pos] = inCat[i];
+                    });
+                }
+
+                dragSrcId = null;
+                saveBookmarks();
+                renderBookmarks();
+            });
+        });
+    }
 }
 
 function updateCategoryList() {
-    // Extract unique categories
     const categories = ['All', ...new Set(bookmarks.map(b => b.category).filter(Boolean))];
-    
-    // Check if the currentCategory still exists, if not fallback to 'All'
+
     if (!categories.includes(currentCategory)) {
         currentCategory = 'All';
     }
@@ -178,19 +284,18 @@ function updateCategoryList() {
         btn.className = `category-btn ${cat === currentCategory ? 'active' : ''}`;
         btn.dataset.category = cat;
         btn.textContent = cat;
-        
+
         btn.addEventListener('click', () => {
             currentCategory = cat;
             document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             renderBookmarks();
         });
-        
+
         li.appendChild(btn);
         categoryList.appendChild(li);
     });
-    
-    // Update datalist options for form
+
     const datalist = document.getElementById('categoryOptions');
     datalist.innerHTML = '';
     categories.filter(c => c !== 'All').forEach(cat => {
@@ -203,30 +308,28 @@ function updateCategoryList() {
 // Event Listeners
 function setupEventListeners() {
     searchInput.addEventListener('input', renderBookmarks);
-    
+
     themeToggle.addEventListener('click', toggleTheme);
-    
+
     addBtn.addEventListener('click', () => {
         bookmarkForm.reset();
         bookmarkIdInput.value = '';
         modalTitle.textContent = 'Add Bookmark';
         openModal(bookmarkModal);
     });
-    
+
     closeModalBtn.addEventListener('click', () => closeModal(bookmarkModal));
     cancelModalBtn.addEventListener('click', () => closeModal(bookmarkModal));
-    
+
     cancelDeleteBtn.addEventListener('click', () => closeModal(deleteModal));
-    
+
     bookmarkForm.addEventListener('submit', handleFormSubmit);
-    
+
     confirmDeleteBtn.addEventListener('click', handleDeleteConfirm);
-    
-    // Export / Import
+
     document.getElementById('exportBtn').addEventListener('click', exportJSON);
     document.getElementById('importInput').addEventListener('change', importJSON);
-    
-    // Close modal on outside click
+
     window.addEventListener('click', (e) => {
         if (e.target === bookmarkModal) closeModal(bookmarkModal);
         if (e.target === deleteModal) closeModal(deleteModal);
@@ -245,13 +348,13 @@ function closeModal(modal) {
 function openEditModal(id) {
     const bookmark = bookmarks.find(b => b.id === id);
     if (!bookmark) return;
-    
+
     bookmarkIdInput.value = bookmark.id;
     titleInput.value = bookmark.title;
     urlInput.value = bookmark.url;
     categoryInput.value = bookmark.category;
     descriptionInput.value = bookmark.description;
-    
+
     modalTitle.textContent = 'Edit Bookmark';
     openModal(bookmarkModal);
 }
@@ -264,13 +367,12 @@ function openDeleteModal(id) {
 // Form Submission
 function handleFormSubmit(e) {
     e.preventDefault();
-    
-    // URL Validation
+
     let url = urlInput.value.trim();
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
         url = 'https://' + url;
     }
-    
+
     try {
         new URL(url);
     } catch (_) {
@@ -284,24 +386,22 @@ function handleFormSubmit(e) {
         category: categoryInput.value.trim() || 'Uncategorized',
         description: descriptionInput.value.trim()
     };
-    
+
     const id = bookmarkIdInput.value;
-    
+
     if (id) {
-        // Edit existing
         const index = bookmarks.findIndex(b => b.id === parseInt(id));
         if (index !== -1) {
             bookmarks[index] = { ...bookmarks[index], ...bookmarkData };
             showToast('Bookmark updated successfully!', 'success');
         }
     } else {
-        // Add new
         bookmarkData.id = Date.now();
         bookmarkData.createdAt = new Date().toISOString();
         bookmarks.push(bookmarkData);
         showToast('Bookmark added successfully!', 'success');
     }
-    
+
     saveBookmarks();
     renderBookmarks();
     closeModal(bookmarkModal);
@@ -350,7 +450,7 @@ function showToast(message, type = 'success') {
     const container = document.getElementById('toastContainer');
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
-    
+
     let icon = '';
     if (type === 'success') {
         icon = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--success-color)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
@@ -359,13 +459,9 @@ function showToast(message, type = 'success') {
     }
 
     toast.innerHTML = `${icon}<span>${message}</span>`;
-    
     container.appendChild(toast);
-    
-    // Trigger animation
+
     setTimeout(() => toast.classList.add('show'), 10);
-    
-    // Remove after 3s
     setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => toast.remove(), 300);
@@ -375,28 +471,25 @@ function showToast(message, type = 'success') {
 // Import / Export
 function exportJSON() {
     const dataStr = JSON.stringify(bookmarks, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-    
-    const exportFileDefaultName = 'bookmarks.json';
-    
+    const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.setAttribute('download', 'bookmarks.json');
     linkElement.click();
-    
+
     showToast('Bookmarks exported successfully!', 'success');
 }
 
 function importJSON(e) {
     const file = e.target.files[0];
     if (!file) return;
-    
+
     const reader = new FileReader();
-    reader.onload = function(event) {
+    reader.onload = function (event) {
         try {
             const importedData = JSON.parse(event.target.result);
             if (Array.isArray(importedData)) {
-                // simple merge
                 bookmarks = [...bookmarks, ...importedData];
                 saveBookmarks();
                 renderBookmarks();
@@ -409,7 +502,7 @@ function importJSON(e) {
         }
     };
     reader.readAsText(file);
-    e.target.value = ''; // reset input
+    e.target.value = '';
 }
 
 // Start app

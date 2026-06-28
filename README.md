@@ -8,13 +8,14 @@ A clean, modern, and fully responsive web app for saving, organizing, and managi
 
 ## About
 
-Bookmarks Manager is a personal dashboard for keeping your favorite links in one place. Instead of relying on a cluttered browser bookmarks bar, you can group links by category, search quickly, and switch between light and dark themes.
+Bookmarks Manager is a personal dashboard for keeping your favorite links in one place. Instead of relying on a cluttered browser bookmarks bar, you can group links by category, search quickly, drag cards into any order you like, and switch between light and dark themes.
 
 Your bookmarks are stored locally in the browser, so the app works offline after the first load. You can also back up or restore your collection by exporting and importing JSON files.
 
 ## Features
 
 - **Add, edit, and delete bookmarks** — Manage links with title, URL, category, and description
+- **Drag-and-drop reordering** — Drag any bookmark card to rearrange it; works in both the All view and individual category views. Order is saved automatically
 - **Category filtering** — Sidebar filters bookmarks by category (e.g. Development, Media, Shopping)
 - **Live search** — Search across title, category, and description
 - **Dark / light mode** — Theme preference is saved in `localStorage`
@@ -60,11 +61,12 @@ On the first visit, the app loads bookmarks from `data/bookmarks.json` and saves
 
 1. **Add a bookmark** — Click **Add Bookmark**, fill in the form, and save.
 2. **Edit or delete** — Use the edit or delete icons on a bookmark card (visible on hover, always visible on mobile).
-3. **Filter by category** — Select a category in the sidebar.
-4. **Search** — Type in the search bar to filter by title, category, or description.
-5. **Toggle theme** — Use the sun/moon button in the navbar.
-6. **Export** — Click **Export JSON** to download your bookmarks.
-7. **Import** — Click **Import JSON** and select a valid JSON array file to merge into your collection.
+3. **Reorder bookmarks** — Hover a card to reveal the drag handle (⠿) on the left of the card header, then drag it to the desired position. Works in all category views. Reordering is disabled while a text search is active.
+4. **Filter by category** — Select a category in the sidebar.
+5. **Search** — Type in the search bar to filter by title, category, or description.
+6. **Toggle theme** — Use the sun/moon button in the navbar.
+7. **Export** — Click **Export JSON** to download your bookmarks.
+8. **Import** — Click **Import JSON** and select a valid JSON array file to merge into your collection.
 
 ### Bookmark data format
 
@@ -86,7 +88,7 @@ Each bookmark is a JSON object with these fields:
 - **Persistence** — Bookmarks are stored under the key `uzair_bookmarks` in `localStorage`. Theme preference uses `uzair_theme`.
 - **Initial data** — If no saved data exists, the app fetches `data/bookmarks.json`. If that fails, a small built-in fallback set is used.
 - **URL handling** — URLs without `http://` or `https://` are prefixed with `https://` automatically.
-- **Sorting** — Bookmarks are shown newest first, based on `createdAt`.
+- **Ordering** — Bookmarks are displayed in the order they appear in the saved array. Drag-and-drop reorders them in place; the new order is persisted immediately. When filtering by category, only bookmarks within that category are reordered — bookmarks from other categories are unaffected.
 
 ## License
 

@@ -327,6 +327,41 @@ h1, h2, h3, h4 {
     border-color: var(--accent-color);
 }
 
+/* ==== Drag & Drop ==== */
+.drag-handle {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    cursor: grab;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    flex-shrink: 0;
+    padding: 0 4px 0 0;
+}
+
+.bookmark-card:hover .drag-handle {
+    opacity: 1;
+}
+
+.bookmark-card[draggable="false"] .drag-handle {
+    display: none;
+}
+
+.bookmark-card.dragging {
+    opacity: 0.4;
+    cursor: grabbing;
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+    z-index: 10;
+}
+
+.bookmark-card.drag-over {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--accent-color);
+    transform: translateY(-4px);
+}
+
 .card-header {
     display: flex;
     align-items: flex-start;
