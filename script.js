@@ -488,7 +488,7 @@ function exportJSON() {
 
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', 'bookmarks.json');
+    linkElement.setAttribute('download', 'saved-bookmarks.json');
     linkElement.click();
 
     showToast('Bookmarks exported successfully!', 'success');
