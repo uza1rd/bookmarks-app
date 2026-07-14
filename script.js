@@ -110,8 +110,8 @@ function renderBookmarks() {
     const filtered = bookmarks.filter(b => {
         const matchesCategory = currentCategory === 'All' || b.category === currentCategory;
         const matchesSearch = b.title.toLowerCase().includes(searchTerm) ||
-                              (b.category && b.category.toLowerCase().includes(searchTerm)) ||
-                              (b.description && b.description.toLowerCase().includes(searchTerm));
+            (b.category && b.category.toLowerCase().includes(searchTerm)) ||
+            (b.description && b.description.toLowerCase().includes(searchTerm));
         return matchesCategory && matchesSearch;
     });
 

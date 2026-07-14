@@ -26,13 +26,13 @@ Your bookmarks are stored locally in the browser, so the app works offline after
 
 ## Tech Stack
 
-| Layer      | Technology                          |
-| ---------- | ----------------------------------- |
-| Markup     | HTML5                               |
-| Styling    | CSS3 (custom properties, flex/grid) |
-| Logic      | Vanilla JavaScript (ES6+)           |
-| Storage    | Browser `localStorage`              |
-| Fonts      | [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts) |
+| Layer   | Technology                                                      |
+| ------- | --------------------------------------------------------------- |
+| Markup  | HTML5                                                           |
+| Styling | CSS3 (custom properties, flex/grid)                             |
+| Logic   | Vanilla JavaScript (ES6+)                                       |
+| Storage | Browser `localStorage`                                          |
+| Fonts   | [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts) |
 
 ## Project Structure
 
