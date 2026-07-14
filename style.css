@@ -300,6 +300,7 @@ h1, h2, h3, h4 {
     transition: var(--transition);
     color: white;
     text-align: center;
+    white-space: nowrap;
 }
 
 .sidebar-btn:hover {
