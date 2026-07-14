@@ -88,6 +88,14 @@
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
+    "title": "Google Fonts",
+    "url": "https://fonts.google.com/",
+    "category": "Bookmarks Bar",
+    "description": "Making the web more beautiful, fast, and open through great typography.",
+    "id": 1782627466525,
+    "createdAt": "2026-06-28T06:17:46.525Z"
+  },
+  {
     "id": 12,
     "title": "Lovable",
     "url": "https://lovable.dev/",
@@ -144,17 +152,17 @@
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
-    "id": 19,
-    "title": "LinkedIn",
-    "url": "https://www.linkedin.com/feed/",
-    "category": "Bookmarks Bar",
-    "description": "Professional networking platform",
-    "createdAt": "2026-05-13T00:00:00Z"
+    "title": "Moctale",
+    "url": "https://www.moctale.in/explore",
+    "category": "Media",
+    "description": "Track everything you watch. Discover movies & shows across all OTTs and track what you watch.",
+    "id": 1782627658239,
+    "createdAt": "2026-06-28T06:20:58.239Z"
   },
   {
     "id": 20,
     "title": "MoviesMod",
-    "url": "https://moviesmod.farm/",
+    "url": "https://moviesmod.army/",
     "category": "Media",
     "description": "Movie download website",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -162,7 +170,7 @@
   {
     "id": 21,
     "title": "MoviesLeech",
-    "url": "https://moviesleech.link/",
+    "url": "https://moviesleech.bar/",
     "category": "Media",
     "description": "Movie streaming and download site",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -170,7 +178,7 @@
   {
     "id": 22,
     "title": "Movies4U",
-    "url": "https://movies4u.ee/",
+    "url": "https://movies4u.pn/",
     "category": "Media",
     "description": "Online movie streaming platform",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -178,7 +186,7 @@
   {
     "id": 23,
     "title": "HDHub4U",
-    "url": "https://new1.hdhub4u.limo/?utm=mn1",
+    "url": "https://new2.hdhub4u.cl/",
     "category": "Media",
     "description": "Movie and series download website",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -186,17 +194,9 @@
   {
     "id": 24,
     "title": "VegaMovies",
-    "url": "https://vegamovies.global/",
+    "url": "https://vegamovie.sn/",
     "category": "Media",
     "description": "Movie streaming and download site",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
-    "id": 25,
-    "title": "MKVCinemas",
-    "url": "https://mkvcinemas.sc/",
-    "category": "Media",
-    "description": "Movie download platform",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
@@ -284,7 +284,7 @@
     "title": "Classy Shoes Reseller",
     "url": "https://classyshoesreseller.cartpe.in/",
     "category": "Dupes Shopping",
-    "description": "Address: 316",
+    "description": "Address: 316, Dharamkruti",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
@@ -292,7 +292,7 @@
     "title": "Kamal Enterprise",
     "url": "https://kamalenterprise.cartpe.in/",
     "category": "Dupes Shopping",
-    "description": "Address: 3rd Floor Last",
+    "description": "Address: 3rd Floor Last, Dharamkruti",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
@@ -300,7 +300,7 @@
     "title": "Golden Sunglass",
     "url": "https://goldensunglass.cartpe.in/",
     "category": "Dupes Shopping",
-    "description": "Address: 4th Floor",
+    "description": "Address: 4th Floor, Dharamkruti",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
@@ -328,27 +328,115 @@
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
-    "id": 42,
-    "title": "Foot Shoppers",
-    "url": "https://foot-shoppers.cartpe.in/",
-    "category": "Dupes Shopping",
-    "description": "Footwear reseller platform",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
-    "id": 43,
-    "title": "Le Brouges Resell",
-    "url": "https://le-brouges-resell.cartpe.in/",
-    "category": "Dupes Shopping",
-    "description": "Fashion reseller store",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
     "id": 44,
     "title": "VNSGU",
     "url": "https://vnsgu.net/",
     "category": "University",
     "description": "Veer Narmad South Gujarat University portal",
     "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "title": "Zepto",
+    "url": "https://www.zepto.com/",
+    "category": "Shopping & Booking",
+    "description": "Instant Delivery",
+    "id": 1779257795029,
+    "createdAt": "2026-05-20T06:16:35.029Z"
+  },
+  {
+    "title": "Metro Kicks",
+    "url": "https://metro-kicks.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 311, Dharamkruti",
+    "id": 1781333539644,
+    "createdAt": "2026-06-13T06:52:19.644Z"
+  },
+  {
+    "title": "Royal Shoes",
+    "url": "https://royalshoes11.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 313, Dharamkruti",
+    "id": 1781334527996,
+    "createdAt": "2026-06-13T07:08:47.996Z"
+  },
+  {
+    "title": "Shoezerry",
+    "url": "https://shoezerry1.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 114, Dharamkruti",
+    "id": 1781334971699,
+    "createdAt": "2026-06-13T07:16:11.699Z"
+  },
+  {
+    "title": "Sneaker Hunt",
+    "url": "https://sneakerhunt.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: UG17, 1st Floor, Raj Icon",
+    "id": 1781335678148,
+    "createdAt": "2026-06-13T07:27:58.148Z"
+  },
+  {
+    "id": 19,
+    "title": "LinkedIn",
+    "url": "https://www.linkedin.com/feed/",
+    "category": "Bookmarks Bar",
+    "description": "Professional networking platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 25,
+    "title": "MKVCinemas",
+    "url": "https://mkvcinemas.gg/",
+    "category": "Media",
+    "description": "Movie download platform",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "title": "PDF24",
+    "url": "https://tools.pdf24.org/en/",
+    "category": "Tools",
+    "description": "PDF24 offers you a collection of tools that you can use to work productively with PDFs and other files.",
+    "id": 1782627728259,
+    "createdAt": "2026-06-28T06:22:08.259Z"
+  },
+  {
+    "title": "Pi7 Image",
+    "url": "https://image.pi7.org/",
+    "category": "Tools",
+    "description": "Pi7 Image Tool is a comprehensive online platform offering fast, secure, and automated image editing utilities.",
+    "id": 1782627857775,
+    "createdAt": "2026-06-28T06:24:17.775Z"
+  },
+  {
+    "title": "Canva",
+    "url": "https://www.canva.com/",
+    "category": "Tools",
+    "description": "Canva is a free-to-use online visual communications and graphic design platform.",
+    "id": 1782627967619,
+    "createdAt": "2026-06-28T06:26:07.619Z"
+  },
+  {
+    "title": "Shoe Trendz Reseller",
+    "url": "https://shoetrendzreseller.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: 112, Ground Floor, Matcheswala Market, Chowk Bazar",
+    "id": 1783688966415,
+    "createdAt": "2026-07-10T13:09:26.415Z"
+  },
+  {
+    "title": "Supreme",
+    "url": "https://supreme.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: G17, Ground Floor, Raj Icon",
+    "id": 1783693376937,
+    "createdAt": "2026-07-10T14:22:56.938Z"
+  },
+  {
+    "title": "Hype Store",
+    "url": "https://hypeshoe.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address: G33, Ground Floor, Raj Icon",
+    "id": 1783694155923,
+    "createdAt": "2026-07-10T14:35:55.923Z"
   }
 ]
