@@ -16,6 +16,7 @@ const categoryList = document.getElementById('categoryList');
 // Modals
 const bookmarkModal = document.getElementById('bookmarkModal');
 const deleteModal = document.getElementById('deleteModal');
+const deleteAllModal = document.getElementById('deleteAllModal');
 const bookmarkForm = document.getElementById('bookmarkForm');
 const modalTitle = document.getElementById('modalTitle');
 const closeModalBtn = document.getElementById('closeModalBtn');
@@ -243,10 +244,9 @@ function renderBookmarks() {
                     // 3. Build a lookup of the desired order for items in this category
                     const newOrderMap = new Map(filteredIds.map((id, i) => [id, i]));
 
-                    // 4. Split bookmarks into in-category and out-of-category,
-                    //    preserving out-of-category positions untouched.
+                    // 4. Split bookmarks into in-category items only;
+                    //    out-of-category positions stay untouched.
                     const inCat = bookmarks.filter(b => b.category === currentCategory);
-                    const outCat = bookmarks.filter(b => b.category !== currentCategory);
 
                     // Sort the in-category items by the new order
                     inCat.sort((a, b) => newOrderMap.get(a.id) - newOrderMap.get(b.id));
@@ -323,6 +323,10 @@ function setupEventListeners() {
 
     cancelDeleteBtn.addEventListener('click', () => closeModal(deleteModal));
 
+    document.getElementById('deleteAllBtn').addEventListener('click', () => openModal(deleteAllModal));
+    document.getElementById('cancelDeleteAllBtn').addEventListener('click', () => closeModal(deleteAllModal));
+    document.getElementById('confirmDeleteAllBtn').addEventListener('click', handleDeleteAllConfirm);
+
     bookmarkForm.addEventListener('submit', handleFormSubmit);
 
     confirmDeleteBtn.addEventListener('click', handleDeleteConfirm);
@@ -333,6 +337,7 @@ function setupEventListeners() {
     window.addEventListener('click', (e) => {
         if (e.target === bookmarkModal) closeModal(bookmarkModal);
         if (e.target === deleteModal) closeModal(deleteModal);
+        if (e.target === deleteAllModal) closeModal(deleteAllModal);
     });
 }
 
@@ -416,6 +421,14 @@ function handleDeleteConfirm() {
         bookmarkToDelete = null;
     }
     closeModal(deleteModal);
+}
+
+function handleDeleteAllConfirm() {
+    bookmarks = [];
+    saveBookmarks();
+    renderBookmarks();
+    closeModal(deleteAllModal);
+    showToast('All bookmarks deleted.', 'success');
 }
 
 // Theme

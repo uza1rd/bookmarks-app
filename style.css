@@ -148,18 +148,6 @@ h1, h2, h3, h4 {
 }
 
 /* ==== Buttons ==== */
-.btn-base {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    font-size: 0.875rem;
-    transition: var(--transition);
-}
-
 .primary-btn {
     background-color: var(--accent-color);
     color: white;
@@ -294,10 +282,45 @@ h1, h2, h3, h4 {
     border-top: 1px solid var(--border-color);
 }
 
-.file-label {
-    cursor: pointer;
-    text-align: center;
+/* ==== Sidebar action buttons (Export / Import / Delete All) ==== */
+/* Shared base — same size, font, shape for all three */
+.sidebar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    color: white;
+    text-align: center;
+}
+
+.sidebar-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Color variants */
+.export-btn    { background-color: #2563eb; }
+.export-btn:hover { background-color: #1d4ed8; }
+
+.import-btn    { background-color: #16a34a; }
+.import-btn:hover { background-color: #15803d; }
+
+.delete-all-btn { background-color: var(--danger-color); }
+.delete-all-btn:hover { background-color: var(--danger-hover); }
+
+/* Lock SVG icons to a consistent size inside sidebar buttons */
+.sidebar-btn svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
 }
 
 /* ==== Bookmarks Grid ==== */
@@ -493,7 +516,8 @@ h1, h2, h3, h4 {
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.active {
@@ -578,6 +602,10 @@ h1, h2, h3, h4 {
 .delete-modal .modal-header {
     justify-content: center;
     margin-bottom: 1rem;
+}
+
+.delete-modal .modal-footer {
+    justify-content: center;
 }
 
 /* ==== Toasts ==== */
