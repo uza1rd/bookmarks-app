@@ -154,49 +154,49 @@
   {
     "id": 22,
     "title": "Movies4U",
-    "url": "https://movies4u.ss/",
+    "url": "https://movies4u.cr/",
     "category": "Media",
-    "description": "Online movie streaming platform",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
-    "id": 20,
-    "title": "MoviesMod",
-    "url": "https://moviesmod.at/",
-    "category": "Media",
-    "description": "Movie download website",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
-    "id": 21,
-    "title": "MoviesLeech",
-    "url": "https://moviesleech.asia/",
-    "category": "Media",
-    "description": "Movie streaming and download site",
+    "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "id": 23,
     "title": "HDHub4U",
-    "url": "https://new3.hdhub4u.cl/",
+    "url": "https://new2.hdhub4u.free/",
     "category": "Media",
-    "description": "Movie and series download website",
+    "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 20,
+    "title": "MoviesMod",
+    "url": "https://moviesmod.ai.in/",
+    "category": "Media",
+    "description": "Overseas Movies and TV Series tool",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "id": 21,
+    "title": "MoviesLeech",
+    "url": "https://moviesleech.club/",
+    "category": "Media",
+    "description": "Indian Movies and TV Series tool",
+    "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "title": "UHD Movies",
+    "url": "https://uhdmovies.my/",
+    "category": "Media",
+    "description": "Ultra HD Movies and TV Series tool",
+    "id": 1789888530465,
+    "createdAt": "2026-09-20T07:15:30.465Z"
   },
   {
     "id": 24,
     "title": "VegaMovies",
-    "url": "https://vegamovie.su/",
+    "url": "https://vegaMoviess.io/",
     "category": "Media",
-    "description": "Movie streaming and download site",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
-    "id": 25,
-    "title": "MKVCinemas",
-    "url": "https://mkvcinemas.id/",
-    "category": "Media",
-    "description": "Movie download platform",
+    "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
@@ -384,12 +384,12 @@
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
-    "title": "Moctale",
-    "url": "https://www.moctale.in/explore",
+    "id": 25,
+    "title": "MKVCinemas",
+    "url": "https://mkvcinemas.fo/",
     "category": "Media",
-    "description": "Track everything you watch. Discover movies & shows across all OTTs and track what you watch",
-    "id": 1782627658239,
-    "createdAt": "2026-06-28T06:20:58.239Z"
+    "description": "All Movies and TV Series tool",
+    "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "title": "PDF24",
@@ -438,5 +438,61 @@
     "category": "Dupes Shopping",
     "description": "Address:",
     "createdAt": "2026-05-13T00:00:00Z"
+  },
+  {
+    "title": "India's Got Latent",
+    "url": "https://indiassgetlentp.freeforall.dev/",
+    "category": "Media",
+    "description": "Latent Archive",
+    "id": 1784299508551,
+    "createdAt": "2026-07-17T14:45:08.552Z"
+  },
+  {
+    "title": "FMHY",
+    "url": "https://fmhy.net/",
+    "category": "Tools",
+    "description": "Ultimate torrent guide",
+    "id": 1785394809230,
+    "createdAt": "2026-07-30T07:00:09.231Z"
+  },
+  {
+    "title": "Moctale",
+    "url": "https://www.moctale.in/explore",
+    "category": "Media",
+    "description": "Track everything you watch. Discover movies & shows across all OTTs and track what you watch",
+    "id": 1782627658239,
+    "createdAt": "2026-06-28T06:20:58.239Z"
+  },
+  {
+    "title": "Naukri",
+    "url": "https://www.naukri.com/mnjuser/homepage",
+    "category": "Job Hunt",
+    "description": "Naukri.com is India's largest online job portal and recruitment platform.",
+    "id": 1785252083203,
+    "createdAt": "2026-07-28T15:21:23.203Z"
+  },
+  {
+    "title": "Indeed",
+    "url": "https://in.indeed.com/?from=gnav-homepage",
+    "category": "Job Hunt",
+    "description": "An Indeed job description is a written summary of an open job. It tells job seekers about the role, daily tasks, required skills, and pay. Employers use Indeed for Employers to post these details and attract qualified workers.",
+    "id": 1785252887991,
+    "createdAt": "2026-07-28T15:34:47.991Z"
+  },
+  {
+    "title": "Apna",
+    "url": "https://apna.co/home",
+    "category": "Job Hunt",
+    "description": "is an Indian job search and professional networking platform founded in 2019. It connects local workers, freshers, and professionals with employers. The app focuses on entry-level, blue-collar, grey-collar, and white-collar jobs across hundreds of cities.",
+    "id": 1785253390167,
+    "createdAt": "2026-07-28T15:43:10.167Z"
+  },
+  {
+    "title": "MXPlayer",
+    "url": "https://www.mxplayer.in/",
+    "category": "Media",
+    "description": "Stream Movies and TV Series",
+    "id": 1786156221114,
+    "createdAt": "2026-08-08T02:30:21.117Z"
   }
 ]
