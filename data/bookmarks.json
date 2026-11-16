@@ -154,7 +154,7 @@
   {
     "id": 22,
     "title": "Movies4U",
-    "url": "https://movies4u.cr/",
+    "url": "https://movies4u.td/",
     "category": "Media",
     "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -162,7 +162,7 @@
   {
     "id": 23,
     "title": "HDHub4U",
-    "url": "https://new2.hdhub4u.free/",
+    "url": "https://new13.hdhub4u.cl/",
     "category": "Media",
     "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -170,7 +170,7 @@
   {
     "id": 20,
     "title": "MoviesMod",
-    "url": "https://moviesmod.ai.in/",
+    "url": "https://moviesmod.tw/",
     "category": "Media",
     "description": "Overseas Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -178,14 +178,14 @@
   {
     "id": 21,
     "title": "MoviesLeech",
-    "url": "https://moviesleech.club/",
+    "url": "https://moviesleech.media/",
     "category": "Media",
     "description": "Indian Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
   },
   {
     "title": "UHD Movies",
-    "url": "https://uhdmovies.my/",
+    "url": "https://uhdmovies.beauty/",
     "category": "Media",
     "description": "Ultra HD Movies and TV Series tool",
     "id": 1789888530465,
@@ -194,7 +194,7 @@
   {
     "id": 24,
     "title": "VegaMovies",
-    "url": "https://vegaMoviess.io/",
+    "url": "https://vegamovies.domains/",
     "category": "Media",
     "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -299,7 +299,7 @@
     "title": "Metro Kicks",
     "url": "https://metro-kicks.cartpe.in/",
     "category": "Dupes Shopping",
-    "description": "Address: 311, Dharamkruti",
+    "description": "Address: 106, Golden Square",
     "id": 1781333539644,
     "createdAt": "2026-06-13T06:52:19.644Z"
   },
@@ -386,7 +386,7 @@
   {
     "id": 25,
     "title": "MKVCinemas",
-    "url": "https://mkvcinemas.fo/",
+    "url": "https://mkvcinemas.blue/",
     "category": "Media",
     "description": "All Movies and TV Series tool",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -416,6 +416,14 @@
     "createdAt": "2026-06-28T06:26:07.619Z"
   },
   {
+    "title": "Le Brouges",
+    "url": "https://le-brouges-resell.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "11/1448-B, Chiniwala Pole, besides Patwa Masjid",
+    "id": 1794101305482,
+    "createdAt": "2026-11-08T01:28:25.482Z"
+  },
+  {
     "id": 39,
     "title": "Classy Slide",
     "url": "https://classyslide.cartpe.in/",
@@ -427,14 +435,6 @@
     "id": 40,
     "title": "Watch Aqua",
     "url": "https://watch-aqua.cartpe.in/",
-    "category": "Dupes Shopping",
-    "description": "Address:",
-    "createdAt": "2026-05-13T00:00:00Z"
-  },
-  {
-    "id": 41,
-    "title": "WatchCode1",
-    "url": "https://watchcode1.cartpe.in/",
     "category": "Dupes Shopping",
     "description": "Address:",
     "createdAt": "2026-05-13T00:00:00Z"
@@ -494,5 +494,13 @@
     "description": "Stream Movies and TV Series",
     "id": 1786156221114,
     "createdAt": "2026-08-08T02:30:21.117Z"
+  },
+  {
+    "id": 41,
+    "title": "WatchCode1",
+    "url": "https://watchcode1.cartpe.in/",
+    "category": "Dupes Shopping",
+    "description": "Address:",
+    "createdAt": "2026-05-13T00:00:00Z"
   }
 ]
