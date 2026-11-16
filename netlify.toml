@@ -1,0 +1,13 @@
+[build]
+  functions = "netlify/functions"
+
+# Rewrite /api/bookmarks and /api/bookmarks/* to the bookmarks function
+[[redirects]]
+  from   = "/api/bookmarks"
+  to     = "/.netlify/functions/bookmarks"
+  status = 200
+
+[[redirects]]
+  from   = "/api/bookmarks/*"
+  to     = "/.netlify/functions/bookmarks/:splat"
+  status = 200

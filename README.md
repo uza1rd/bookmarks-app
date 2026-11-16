@@ -1,6 +1,8 @@
 # Bookmarks Manager
 
-A clean, modern, and fully responsive web app for saving, organizing, and managing website bookmarks. Built with vanilla HTML, CSS, and JavaScript — no frameworks or build tools required.
+A clean, modern, and fully responsive web app for saving, organizing, and managing website bookmarks. Bookmarks are stored in **MongoDB Atlas** and served via a Node.js/Express backend.
+
+> ⚠️ **Do not open with Live Server.** Always run via `npm start` and visit `http://localhost:3000`.
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
